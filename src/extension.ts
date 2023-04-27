@@ -12,6 +12,7 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(disposable);
 
 
+	// * below event is to check onWillSaveNotebookDocument API
 	// vscode.workspace.onWillSaveNotebookDocument(event => {
 	// 	if (event.reason === vscode.TextDocumentSaveReason.Manual) {
 	// 		event.waitUntil(new Promise((resolve) => {
@@ -22,4 +23,8 @@ export function activate(context: vscode.ExtensionContext) {
 	// 		}));
 	// 	}
 	// });
+}
+
+export function deactivate() {
+
 }
